@@ -103,7 +103,10 @@
     <div class="hero-body">
       <img src="static/images/interspeech25_intro.png" alt="Visual comparison of generated visemes"/>
       <h2 class="subtitle has-text-centered">
-        The key to lifelike speech animation lies in the phonetic viseme context. In natural speech, the lip shape for one sound blends seamlessly into the next, a process known as coarticulation. Traditional methods often overlook this, resulting in abrupt, jittery animations. To achieve the smooth and continuous facial motion seen in reality, it is absolutely essential to model how a viseme changes depending on its specific phonetic context.
+        The key to lifelike speech animation lies in the <strong>phonetic viseme context</strong>. 
+        In natural speech, the lip shape for one sound blends seamlessly into the next, a process known as <strong>coarticulation</strong>. 
+        Traditional methods often overlook this, resulting in abrupt, jittery animations. 
+        To achieve the smooth and continuous facial motion seen in reality, it is absolutely essential to model how a viseme changes depending on its specific phonetic context.
       </h2>
     </div>
   </div>
@@ -116,7 +119,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Speech-driven 3D facial animation aims to generate realistic facial movements synchronized with audio. Traditional methods primarily minimize reconstruction loss by aligning each frame with ground-truth. However, this frame-wise approach often fails to capture the continuity of facial motion, leading to jittery and unnatural outputs due to coarticulation. To address this, we propose a novel phonetic context-aware loss, which explicitly models the influence of phonetic context on viseme transitions. By incorporating a viseme coarticulation weight, we assigns adaptive importance to facial movements based on their dynamic changes over time, ensuring smoother and perceptually consistent animations. Extensive experiments demonstrate that replacing the conventional reconstruction loss with ours improves both quantitative metrics and visual quality. It highlights the importance of explicitly modeling phonetic context-dependent visemes in synthesizing natural speech-driven 3D facial animation.
+            Speech-driven 3D facial animation aims to generate realistic facial movements synchronized with audio. 
+            Traditional methods primarily minimize reconstruction loss by aligning each frame with ground-truth. 
+            However, this frame-wise approach often fails to capture the continuity of facial motion, leading to jittery and unnatural outputs due to coarticulation. 
+            To address this, we propose a novel phonetic context-aware loss, which explicitly models the influence of phonetic context on viseme transitions. 
+            By incorporating a viseme coarticulation weight, we assigns adaptive importance to facial movements based on their dynamic changes over time, ensuring smoother and perceptually consistent animations. 
+            Extensive experiments demonstrate that replacing the conventional reconstruction loss with ours improves both quantitative metrics and visual quality. 
+            It highlights the importance of explicitly modeling phonetic context-dependent visemes in synthesizing natural speech-driven 3D facial animation.
           </p>
         </div>
       </div>
@@ -131,10 +140,14 @@
         <h2 class="title is-3">What is Phonetic Context-aware Loss</h2>
         <div class="content has-text-justified">
           <p>
-            Traditional speech-driven 3D facial animation models are trained by minimizing the geometric error (e.g., MSE Loss) between the generated mesh and the ground truth on a frame-by-frame basis. This approach often fails to capture the continuous nature of facial motion, overlooking the phenomenon of 'coarticulation'—where the articulation of a sound is affected by its neighbors. This results in jittery and perceptually unnatural animations.
+            Traditional speech-driven 3D facial animation models are trained by minimizing the geometric error (e.g., MSE Loss) between the generated mesh and the ground truth on a frame-by-frame basis. 
+            This approach often fails to capture the continuous nature of facial motion, overlooking the phenomenon of 'coarticulation'—where the articulation of a sound is affected by its neighbors. 
+            This results in jittery and perceptually unnatural animations.
           </p>
           <p>
-            Our **Phonetic Context-aware Loss (<span class="math-inline">\\mathcal\{L\}\_\{pc\}</span>)** is a novel objective function that addresses this limitation. It computes a "viseme coarticulation weight" that quantifies how much a viseme's articulation is influenced by its phonetic context. By applying this weight, the model learns to pay more attention to frames with significant articulatory transitions, resulting in smoother, more natural, and intelligible 3D facial animations.
+            <strong>Our Phonetic Context-aware Loss (<span class="math-inline">$\mathcal{L}_{pc}$</span>)</strong> is a novel objective function that addresses this limitation. 
+            It computes a "viseme coarticulation weight" that quantifies how much a viseme's articulation is influenced by its phonetic context. 
+            By applying this weight, the model learns to pay more attention to frames with significant articulatory transitions, resulting in smoother, more natural, and intelligible 3D facial animations.
           </p>
 
         </div>
