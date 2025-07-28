@@ -123,7 +123,7 @@
             Traditional methods primarily minimize reconstruction loss by aligning each frame with ground-truth. 
             However, this frame-wise approach often fails to capture the continuity of facial motion, leading to jittery and unnatural outputs due to coarticulation. 
             To address this, we propose a novel phonetic context-aware loss, which explicitly models the influence of phonetic context on viseme transitions. 
-            By incorporating a viseme coarticulation weight, we assigns adaptive importance to facial movements based on their dynamic changes over time, ensuring smoother and perceptually consistent animations. 
+            By incorporating a viseme coarticulation weight, we <strong>assign</strong> adaptive importance to facial movements based on their dynamic changes over time, ensuring smoother and perceptually consistent animations.
             Extensive experiments demonstrate that replacing the conventional reconstruction loss with ours improves both quantitative metrics and visual quality. 
             It highlights the importance of explicitly modeling phonetic context-dependent visemes in synthesizing natural speech-driven 3D facial animation.
           </p>
@@ -145,10 +145,11 @@
             This results in jittery and perceptually unnatural animations.
           </p>
           <p>
-            <strong>Our Phonetic Context-aware Loss (<span class="math-inline">$\mathcal{L}_{pc}$</span>)</strong> is a novel objective function that addresses this limitation. 
-            It computes a "viseme coarticulation weight" that quantifies how much a viseme's articulation is influenced by its phonetic context. 
-            By applying this weight, the model learns to pay more attention to frames with significant articulatory transitions, resulting in smoother, more natural, and intelligible 3D facial animations.
-          </p>
+            Our <strong>Phonetic Context-aware Loss</strong> is a novel objective function that addresses this limitation.
+            To learn the phonetic context-dependent viseme, we first compute a "viseme coarticulation weight" by quantitatively measuring how much the facial vertices move within a temporal window.
+            By applying this weight to the conventional reconstruction loss [cite: 90], the model can focus more on regions where articulatory movement changes significantly due to coarticulation. 
+            Minimizing this new loss helps the model generate more natural 3D facial animations with continuous and smooth transitions.
+        </p>
 
         </div>
       </div>
