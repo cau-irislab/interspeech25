@@ -177,6 +177,47 @@
   </div>
 </section>
 <!-- End paper Qualitative Result -->
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Temporal Consistency</h2>
+        <figure class="image" style="margin-bottom: 2rem;">
+          <img src="static/images/interspeech25_temporal_consistency.jpg" alt="Visualization of temporal consistency when pronouncing /fa/">
+        </figure>
+        <div class="content has-text-justified">
+          <p>
+            To verify temporal consistency, we visualize the pronunciation process of '/fa/'. The first row shows the Ground Truth (GT), the second shows a baseline model without considering phonetic context, and the third shows our method. 
+            While the baseline model produces inaccurate and abrupt mouth shapes during the transition from '/f/' to '/a/', our model generates smooth and natural transitions that are visibly closer to the GT. 
+            The Vertex Displacement analysis on the right further shows that the Mean and Std of our model's output are closer to the GT, indicating higher temporal stability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Ablation Study on Window Size</h2>
+        <figure class="image" style="margin-bottom: 2rem;">
+          <img src="static/images/interspeech25_ablation.jpg" alt="Ablation study on the effect of window size">
+        </figure>
+        <div class="content has-text-justified">
+          <p>
+            We conduct an ablation study on the <strong>Window Size</strong> hyperparameter, which determines how much <strong>phonetic context</strong> to consider. 
+            The graph plots the Face Vertex Error (FVE) and Lip Vertex Error (LVE) against varying window sizes. 
+            The dotted lines represent the conventional method (L_rec), while the solid lines represent our method (Ours). 
+            Our method demonstrates a lower error rate across all window sizes and achieves optimal performance for both FVE and LVE with a window size of 5.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
  
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
