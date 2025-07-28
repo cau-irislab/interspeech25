@@ -103,6 +103,7 @@
     </div>
   </div>
 </section>
+
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -117,6 +118,26 @@
     </div>
   </div>
 </section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">What is Phonetic Context-aware Loss</h2>
+        <div class="content has-text-justified">
+          <p>
+            Traditional speech-driven 3D facial animation models are trained by minimizing the geometric error (e.g., MSE Loss) between the generated mesh and the ground truth on a frame-by-frame basis. This approach often fails to capture the continuous nature of facial motion, overlooking the phenomenon of 'coarticulation'—where the articulation of a sound is affected by its neighbors. This results in jittery and perceptually unnatural animations.
+          </p>
+          <p>
+            Our **Phonetic Context-aware Loss (<span class="math-inline">\\mathcal\{L\}\_\{pc\}</span>)** is a novel objective function that addresses this limitation. It computes a "viseme coarticulation weight" that quantifies how much a viseme's articulation is influenced by its phonetic context. By applying this weight, the model learns to pay more attention to frames with significant articulatory transitions, resulting in smoother, more natural, and intelligible 3D facial animations.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
